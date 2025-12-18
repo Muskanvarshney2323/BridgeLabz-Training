@@ -1,8 +1,7 @@
-using System;
 
 class Program
 {
-    static void Main()
+    public static void Main(string[] args)
     {
         int[] nums = { 2, 7, 11, 15 };
         int target = 9;
