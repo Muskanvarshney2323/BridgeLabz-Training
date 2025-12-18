@@ -1,8 +1,8 @@
-using System;
 
-class Program
+
+class OddEven
 {
-    static void Main()
+    public static void Main(string[] args)
     {
         int num = 7;
 

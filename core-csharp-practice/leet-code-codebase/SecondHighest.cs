@@ -1,8 +1,7 @@
-using System;
 
-class Program
+class SecondHighest
 {
-    static void Main()
+    public static void Main(string[] args)
     {
         int[] arr = { 10, 45, 22, 89, 34 };
 

@@ -1,8 +1,7 @@
-using System;
 
-class Program
+class Highest
 {
-    static void Main()
+    public static void Main(string[] args)
     {
         int a = 10, b = 25;
 

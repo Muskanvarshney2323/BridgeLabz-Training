@@ -1,9 +1,10 @@
-public class Primr_No{  
+using System;
+public class Prime_No{  
 
     public static void Main(string[] args){
-        cosnole.WriteLine(IsPrime(29));
+        Console.WriteLine(IsPrime(31));
     }
-    public bool IsPrime(int number){
+    public static bool IsPrime(int number){
         if (number <= 1) 
            return false;
         for (int i = 2; i <= Math.Sqrt(number); i++){
