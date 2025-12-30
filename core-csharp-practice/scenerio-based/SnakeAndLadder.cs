@@ -1,70 +1,70 @@
 using System;
 
-class SnakeAndLadder
+class BoardGame
 {
-    static Random rand = new Random();
+    static Random randomGen = new Random();
 
     static void Main()
     {
-        int playerCount = GetPlayerCount();
+        int totalPlayers = ReadPlayerCount();
 
-        string[] players = new string[playerCount];
-        int[] positions = new int[playerCount];
+        string[] playerNames = new string[totalPlayers];
+        int[] playerPositions = new int[totalPlayers];
 
-        for (int i = 0; i < playerCount; i++)
+        for (int idx = 0; idx < totalPlayers; idx++)
         {
-            Console.Write("Enter name of Player " + (i + 1) + ": ");
-            players[i] = Console.ReadLine();
-            positions[i] = 0;
+            Console.Write("Enter name of Player " + (idx + 1) + ": ");
+            playerNames[idx] = Console.ReadLine();
+            playerPositions[idx] = 0;
         }
 
-        // Snakes and ladders using arrays
-        int[] start = { 4, 9, 17, 20, 28, 40, 51, 54, 62, 64, 71, 87, 93, 95, 99 };
-        int[] end   = {14,31, 7, 38, 84, 59, 67, 34, 19, 60, 91, 24, 73, 75, 78 };
+        // Snakes and ladders positions
+        int[] triggerPoints = { 4, 9, 17, 20, 28, 40, 51, 54, 62, 64, 71, 87, 93, 95, 99 };
+        int[] targetPoints  = {14,31, 7, 38, 84, 59, 67, 34, 19, 60, 91, 24, 73, 75, 78 };
 
-        bool gameOver = false;
+        bool isFinished = false;
 
-        while (!gameOver)
+        while (!isFinished)
         {
-            for (int i = 0; i < playerCount; i++)
+            for (int p = 0; p < totalPlayers; p++)
             {
-                Console.WriteLine("\n " + players[i] + "'s turn (Press Enter)");
+                Console.WriteLine("\n " + playerNames[p] + "'s turn (Press Enter)");
                 Console.ReadLine();
 
-                int dice = RollDice();
-                int oldPos = positions[i];
+                int diceValue = GenerateDice();
+                int previousPos = playerPositions[p];
 
-                Console.WriteLine("Dice rolled: " + dice);
+                Console.WriteLine("Dice rolled: " + diceValue);
 
-                if (oldPos + dice > 100)
+                if (previousPos + diceValue > 100)
                 {
                     Console.WriteLine("Move skipped (exceeds 100)");
                     continue;
                 }
 
-                positions[i] += dice;
+                playerPositions[p] += diceValue;
 
-                // Check snake or ladder
-                for (int j = 0; j < start.Length; j++)
+                // Check for snake or ladder
+                for (int s = 0; s < triggerPoints.Length; s++)
                 {
-                    if (positions[i] == start[j])
+                    if (playerPositions[p] == triggerPoints[s])
                     {
-                        string msg = end[j] > start[j]
+                        string message = targetPoints[s] > triggerPoints[s]
                             ? " Ladder! Move up!"
                             : " Snake! Move down!";
 
-                        Console.WriteLine(msg);
-                        positions[i] = end[j];
+                        Console.WriteLine(message);
+                        playerPositions[p] = targetPoints[s];
                         break;
                     }
                 }
 
-                Console.WriteLine(players[i] + ": " + oldPos + " → " + positions[i]);
+                Console.WriteLine(playerNames[p] + ": " + previousPos + " → " + playerPositions[p]);
 
-                if (positions[i] == 100)
+                if (playerPositions[p] == 100)
                 {
-                    Console.WriteLine("\n " + players[i] + " WINS THE GAME! ");
-                    gameOver = true;
+                    Console.WriteLine("\n " + playerNames[p] + " WINS THE GAME! ");
+                    isFinished = true;
                     break;
                 }
             }
@@ -73,20 +73,20 @@ class SnakeAndLadder
         Console.WriteLine("\nGame Over. Thank you for playing!");
     }
 
-    static int GetPlayerCount()
+    static int ReadPlayerCount()
     {
-        int count;
+        int num;
         do
         {
             Console.Write("Enter number of players (2–4): ");
-            count = int.Parse(Console.ReadLine());
-        } while (count < 2 || count > 4);
+            num = int.Parse(Console.ReadLine());
+        } while (num < 2 || num > 4);
 
-        return count;
+        return num;
     }
 
-    static int RollDice()
+    static int GenerateDice()
     {
-        return rand.Next(1, 7);
+        return randomGen.Next(1, 7);
     }
 }
