@@ -42,4 +42,20 @@ public class EmployeeUtilityImpl : IEmployee
 
         Console.WriteLine("❌ Employee Not Found");
     }
+    public void CalculateDailyWage()
+    {
+        Console.Write("Enter Employee ID: ");
+        int id = int.Parse(Console.ReadLine());
+
+        foreach (Employee emp in employees)
+        {
+            if (emp.GetEmpID() == id)
+            {
+                Console.WriteLine($"💰 Daily Wage of {emp.GetEmpName()} = ₹{emp.GetDailyWage()}");
+                return;
+            }
+        }
+
+        Console.WriteLine("❌ Employee Not Found");
+    }
 }

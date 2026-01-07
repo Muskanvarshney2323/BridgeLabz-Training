@@ -25,11 +25,12 @@ public class EmployeeMenu
                 case 2:
                     empUtil.CheckEmployeeAttendance();
                     break;
-
                 case 3:
-                    Console.WriteLine("Thank You 😊");
-                    return;
+                    empUtil.CalculateDailyWage();
+                    break;
 
+                case 4:
+                    return;
                 default:
                     Console.WriteLine("Invalid Choice ❌");
                     break;
