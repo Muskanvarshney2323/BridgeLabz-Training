@@ -2,10 +2,11 @@ using System;
 
 public class EmployeeMenu
 {
-    IEmployee empUtil = new EmployeeUtilityImpl();
+    IEmployee empUtil;
 
     public void ShowMenu()
     {
+        empUtil = new EmployeeUtilityImpl();
         while (true)
         {
             Console.WriteLine("\n====== Employee Wage System ======");
@@ -32,7 +33,7 @@ public class EmployeeMenu
                 case 4:
                     return;
                 default:
-                    Console.WriteLine("Invalid Choice ❌");
+                    Console.WriteLine("Invalid Choice ");
                     break;
             }
         }

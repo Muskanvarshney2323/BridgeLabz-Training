@@ -16,11 +16,11 @@ public class EmployeeUtilityImpl : IEmployee
         Console.Write("Is Employee Present? (yes/no): ");
         bool present = Console.ReadLine().ToLower() == "yes";
 
-        // ✅ Use constructor
+        // constructor
         Employee emp = new Employee(id, name, present);
         employees.Add(emp);
 
-        Console.WriteLine("✅ Employee Added Successfully");
+        Console.WriteLine(" Employee Added Successfully");
     }
 
     public void CheckEmployeeAttendance()
@@ -33,14 +33,14 @@ public class EmployeeUtilityImpl : IEmployee
             if (emp.GetEmpID() == id)
             {
                 if (emp.IsPresent())
-                    Console.WriteLine($"🟢 {emp.GetEmpName()} is PRESENT");
+                    Console.WriteLine($" {emp.GetEmpName()} is PRESENT");
                 else
-                    Console.WriteLine($"🔴 {emp.GetEmpName()} is ABSENT");
+                    Console.WriteLine($" {emp.GetEmpName()} is ABSENT");
                 return;
             }
         }
 
-        Console.WriteLine("❌ Employee Not Found");
+        Console.WriteLine(" Employee Not Found");
     }
     public void CalculateDailyWage()
     {
@@ -51,11 +51,11 @@ public class EmployeeUtilityImpl : IEmployee
         {
             if (emp.GetEmpID() == id)
             {
-                Console.WriteLine($"💰 Daily Wage of {emp.GetEmpName()} = ₹{emp.GetDailyWage()}");
+                Console.WriteLine($" Daily Wage of {emp.GetEmpName()} = ₹{emp.GetDailyWage()}");
                 return;
             }
         }
 
-        Console.WriteLine("❌ Employee Not Found");
+        Console.WriteLine(" Employee Not Found");
     }
 }
