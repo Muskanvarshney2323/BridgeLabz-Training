@@ -3,12 +3,7 @@ using System.Collections.Generic;
 
 namespace LinkedListProblems
 {
-    /// <summary>
-    /// Problem 3: Circular Linked List - Task Scheduler
-    /// 
-    /// Create a task scheduler using a circular linked list. Each node in the list represents a task 
-    /// with Task ID, Task Name, Priority, and Due Date.
-    /// </summary>
+ 
     public class TaskNode
     {
         public int TaskID { get; set; }

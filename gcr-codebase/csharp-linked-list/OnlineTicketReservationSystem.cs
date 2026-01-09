@@ -3,12 +3,7 @@ using System.Collections.Generic;
 
 namespace LinkedListProblems
 {
-    /// <summary>
-    /// Problem 9: Circular Linked List - Online Ticket Reservation System
-    /// 
-    /// Design an online ticket reservation system using a circular linked list, 
-    /// where each node represents a booked ticket.
-    /// </summary>
+    
     public class TicketNode
     {
         public int TicketID { get; set; }

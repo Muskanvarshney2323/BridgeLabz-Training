@@ -3,12 +3,7 @@ using System.Collections.Generic;
 
 namespace LinkedListProblems
 {
-    /// <summary>
-    /// Problem 2: Doubly Linked List - Movie Management System
-    /// 
-    /// Implement a movie management system using a doubly linked list. 
-    /// Each node will represent a movie and contain Movie Title, Director, Year of Release, and Rating.
-    /// </summary>
+   
     public class MovieNode
     {
         public string Title { get; set; }

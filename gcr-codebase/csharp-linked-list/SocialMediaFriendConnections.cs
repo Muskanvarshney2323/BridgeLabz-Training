@@ -3,12 +3,7 @@ using System.Collections.Generic;
 
 namespace LinkedListProblems
 {
-    /// <summary>
-    /// Problem 7: Singly Linked List - Social Media Friend Connections
-    /// 
-    /// Create a system to manage social media friend connections using a singly linked list. 
-    /// Each node represents a user with User ID, Name, Age, and List of Friend IDs.
-    /// </summary>
+    
     public class UserNode
     {
         public int UserID { get; set; }

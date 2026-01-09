@@ -3,12 +3,7 @@ using System.Collections.Generic;
 
 namespace LinkedListProblems
 {
-    /// <summary>
-    /// Problem 1: Singly Linked List - Student Record Management
-    /// 
-    /// Create a program to manage student records using a singly linked list. 
-    /// Each node will store information about a student, including their Roll Number, Name, Age, and Grade.
-    /// </summary>
+    
     public class StudentNode
     {
         public int RollNumber { get; set; }

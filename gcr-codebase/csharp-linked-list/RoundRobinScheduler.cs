@@ -3,12 +3,7 @@ using System.Collections.Generic;
 
 namespace LinkedListProblems
 {
-    /// <summary>
-    /// Problem 6: Circular Linked List - Round Robin Scheduling Algorithm
-    /// 
-    /// Implement a round-robin CPU scheduling algorithm using a circular linked list. 
-    /// Each node will represent a process with Process ID, Burst Time, and Priority.
-    /// </summary>
+    
     public class ProcessNode
     {
         public int ProcessID { get; set; }

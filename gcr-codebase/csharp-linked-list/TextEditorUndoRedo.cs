@@ -3,12 +3,7 @@ using System.Collections.Generic;
 
 namespace LinkedListProblems
 {
-    /// <summary>
-    /// Problem 8: Doubly Linked List - Undo/Redo Functionality for Text Editor
-    /// 
-    /// Design an undo/redo functionality for a text editor using a doubly linked list. 
-    /// Each node represents a state of the text content.
-    /// </summary>
+ 
     public class EditorState
     {
         public string TextContent { get; set; }

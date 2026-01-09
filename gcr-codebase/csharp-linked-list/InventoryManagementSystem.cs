@@ -325,7 +325,6 @@ namespace LinkedListProblems
         }
     }
 
-    // Example Usage
     public class InventoryManagementSystemExample
     {
         public static void Main()
