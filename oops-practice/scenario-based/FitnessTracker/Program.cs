@@ -8,7 +8,7 @@ class Program
         {
             UserId = 1,
             Name = "Muskan",
-            Age = 22,
+            Age = 21,
             Weight = 55
         };
 
