@@ -3,26 +3,9 @@ using System.Collections.Generic;
 
 namespace StackQueueProblems
 {
-    /// <summary>
-    /// Problem 3: Stock Span Problem
-    /// 
-    /// For each day in a stock price array, calculate the span 
-    /// (number of consecutive days the price was less than or equal to the current day's price).
-    /// 
-    /// Hint: Use a stack to keep track of indices of prices in descending order.
-    /// 
-    /// Time Complexity: O(n) where n is the number of days
-    /// Space Complexity: O(n) for the stack
-    /// </summary>
     public class StockSpanProblem
     {
-        /// <summary>
-        /// Calculate the span for each day in the price array
-        /// Returns an array where each element is the span for that day
-        /// 
-        /// Example: prices = [100, 80, 60, 70, 60, 75, 85]
-        /// Output: [1, 1, 1, 2, 1, 4, 6]
-        /// </summary>
+        
         public static int[] CalculateSpan(int[] prices)
         {
             if (prices == null || prices.Length == 0)

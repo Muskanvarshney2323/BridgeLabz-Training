@@ -3,14 +3,7 @@ using System.Collections.Generic;
 
 namespace StackQueueProblems
 {
-    /// <summary>
-    /// Problem 1: Implement a Queue Using Stacks
-    /// 
-    /// Design a queue using two stacks such that enqueue and dequeue operations are performed efficiently.
-    /// 
-    /// Hint: Use one stack for enqueue and another stack for dequeue. 
-    /// Transfer elements between stacks as needed.
-    /// </summary>
+    
     public class QueueUsingStacks<T>
     {
         private Stack<T> enqueueStack;
@@ -22,17 +15,13 @@ namespace StackQueueProblems
             dequeueStack = new Stack<T>();
         }
 
-        /// <summary>
-        /// Add an element to the queue - Time Complexity: O(1)
-        /// </summary>
+    
         public void Enqueue(T element)
         {
             enqueueStack.Push(element);
         }
 
-        /// <summary>
-        /// Remove and return an element from the queue - Amortized Time Complexity: O(1)
-        /// </summary>
+   
         public T Dequeue()
         {
             if (dequeueStack.Count == 0)
@@ -50,9 +39,7 @@ namespace StackQueueProblems
             return dequeueStack.Pop();
         }
 
-        /// <summary>
-        /// Peek at the front element without removing it
-        /// </summary>
+
         public T Peek()
         {
             if (dequeueStack.Count == 0)
@@ -69,18 +56,13 @@ namespace StackQueueProblems
             return dequeueStack.Peek();
         }
 
-        /// <summary>
-        /// Check if the queue is empty
-        /// </summary>
+ 
         public bool IsEmpty => enqueueStack.Count == 0 && dequeueStack.Count == 0;
 
-        /// <summary>
-        /// Get the number of elements in the queue
-        /// </summary>
+
         public int Count => enqueueStack.Count + dequeueStack.Count;
     }
 
-    // Example Usage
     public class QueueUsingStacksExample
     {
         public static void Main()

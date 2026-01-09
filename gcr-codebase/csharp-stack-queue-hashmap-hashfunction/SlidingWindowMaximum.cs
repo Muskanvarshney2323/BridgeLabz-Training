@@ -4,24 +4,10 @@ using System.Linq;
 
 namespace StackQueueProblems
 {
-    /// <summary>
-    /// Problem 4: Sliding Window Maximum
-    /// 
-    /// Given an array and a window size k, find the maximum element in each sliding window of size k.
-    /// 
-    /// Hint: Use a deque (double-ended queue) to maintain indices of useful elements in each window.
-    /// 
-    /// Time Complexity: O(n) where n is the length of the array
-    /// Space Complexity: O(k) where k is the window size
-    /// </summary>
+    
     public class SlidingWindowMaximum
     {
-        /// <summary>
-        /// Find the maximum element in each sliding window of size k
-        /// 
-        /// Example: nums = [1,3,-1,-3,5,3,6,7], k = 3
-        /// Output: [3,3,5,5,6,7]
-        /// </summary>
+       
         public static int[] MaxSlidingWindow(int[] nums, int k)
         {
             if (nums == null || nums.Length == 0 || k <= 0 || k > nums.Length)

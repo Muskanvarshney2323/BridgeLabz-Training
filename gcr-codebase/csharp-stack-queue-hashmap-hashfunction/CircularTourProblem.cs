@@ -3,17 +3,7 @@ using System.Collections.Generic;
 
 namespace StackQueueProblems
 {
-    /// <summary>
-    /// Problem 5: Circular Tour Problem
-    /// 
-    /// Given a set of petrol pumps with petrol and distance to the next pump, 
-    /// determine the starting point for completing a circular tour.
-    /// 
-    /// Hint: Use a queue to simulate the tour, keeping track of surplus petrol at each pump.
-    /// 
-    /// Time Complexity: O(n) where n is the number of pumps
-    /// Space Complexity: O(1) excluding output
-    /// </summary>
+
     public class CircularTourProblem
     {
         public class PetrolPump
@@ -33,14 +23,7 @@ namespace StackQueueProblems
             }
         }
 
-        /// <summary>
-        /// Find the starting point for completing a circular tour
-        /// Returns the index (0-based) of the starting petrol pump, or -1 if no solution exists
-        /// 
-        /// The idea is that if total petrol is greater than total distance, 
-        /// a solution must exist. We can find the starting point using a single pass.
-        /// </summary>
-        public static int FindStartingPoint(PetrolPump[] pumps)
+               public static int FindStartingPoint(PetrolPump[] pumps)
         {
             if (pumps == null || pumps.Length == 0)
                 return -1;
@@ -56,8 +39,7 @@ namespace StackQueueProblems
                 totalDistance += pumps[i].Distance;
                 currentPetrol += pumps[i].Petrol - pumps[i].Distance;
 
-                // If we run out of petrol at pump i, we cannot start from any pump between start and i
-                // So the next possible start is pump i + 1
+               
                 if (currentPetrol < 0)
                 {
                     start = i + 1;
@@ -69,9 +51,7 @@ namespace StackQueueProblems
             return totalPetrol >= totalDistance ? start : -1;
         }
 
-        /// <summary>
-        /// Verify if a starting point completes the tour successfully
-        /// </summary>
+    
         public static bool VerifyTour(PetrolPump[] pumps, int start)
         {
             if (pumps == null || pumps.Length == 0 || start < 0 || start >= pumps.Length)
@@ -91,11 +71,6 @@ namespace StackQueueProblems
 
             return true;
         }
-
-        /// <summary>
-        /// Alternative approach using queue simulation
-        /// More intuitive but slightly less efficient
-        /// </summary>
         public static int FindStartingPointQueue(PetrolPump[] pumps)
         {
             if (pumps == null || pumps.Length == 0)

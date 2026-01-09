@@ -3,22 +3,9 @@ using System.Collections.Generic;
 
 namespace StackQueueProblems
 {
-    /// <summary>
-    /// Problem 2: Sort a Stack Using Recursion
-    /// 
-    /// Given a stack, sort its elements in ascending order using recursion.
-    /// 
-    /// Hint: Pop elements recursively, sort the remaining stack, 
-    /// and insert the popped element back at the correct position.
-    /// 
-    /// Time Complexity: O(n^2) where n is the number of elements
-    /// Space Complexity: O(n) for recursion stack
-    /// </summary>
-    public class SortStackRecursively
+        public class SortStackRecursively
     {
-        /// <summary>
-        /// Sorts a stack in ascending order (smallest at the top)
-        /// </summary>
+      
         public static void SortStack(Stack<int> stack)
         {
             // Base case: if stack is empty, return

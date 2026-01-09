@@ -3,18 +3,7 @@ using System.Collections.Generic;
 
 namespace HashMapProblems
 {
-    /// <summary>
-    /// Problem 4: Implement a Custom Hash Map
-    /// 
-    /// Design and implement a basic hash map class with operations for insertion, deletion, and retrieval.
-    /// 
-    /// Hint: Use an array of linked lists to handle collisions using separate chaining.
-    /// 
-    /// Time Complexity:
-    ///   - Average: O(1) for insert, delete, and get
-    ///   - Worst: O(n) when all keys hash to the same index
-    /// Space Complexity: O(capacity + n) where n is number of elements
-    /// </summary>
+   
     public class CustomHashMap<TKey, TValue>
     {
         private const int DEFAULT_CAPACITY = 16;
@@ -35,9 +24,9 @@ namespace HashMapProblems
             size = 0;
         }
 
-        /// <summary>
+        
         /// Hash function to map key to bucket index
-        /// </summary>
+   
         private int GetBucketIndex(TKey key)
         {
             if (key == null)
@@ -47,9 +36,9 @@ namespace HashMapProblems
             return Math.Abs(hashCode) % buckets.Length;
         }
 
-        /// <summary>
+
         /// Get the bucket (linked list) for a key
-        /// </summary>
+
         private LinkedList<KeyValuePair<TKey, TValue>> GetBucket(TKey key)
         {
             int index = GetBucketIndex(key);
@@ -62,9 +51,8 @@ namespace HashMapProblems
             return buckets[index];
         }
 
-        /// <summary>
         /// Insert or update a key-value pair
-        /// </summary>
+
         public void Put(TKey key, TValue value)
         {
             if (key == null)
@@ -97,9 +85,8 @@ namespace HashMapProblems
             }
         }
 
-        /// <summary>
         /// Get value associated with a key
-        /// </summary>
+
         public TValue Get(TKey key)
         {
             if (key == null)
@@ -120,9 +107,9 @@ namespace HashMapProblems
             throw new KeyNotFoundException($"Key '{key}' not found in hash map");
         }
 
-        /// <summary>
+
         /// Try to get a value without throwing exception
-        /// </summary>
+
         public bool TryGet(TKey key, out TValue value)
         {
             value = default;
@@ -146,9 +133,8 @@ namespace HashMapProblems
             return false;
         }
 
-        /// <summary>
         /// Remove a key-value pair
-        /// </summary>
+
         public bool Remove(TKey key)
         {
             if (key == null)
@@ -171,9 +157,8 @@ namespace HashMapProblems
             return false;
         }
 
-        /// <summary>
         /// Check if a key exists
-        /// </summary>
+ 
         public bool ContainsKey(TKey key)
         {
             if (key == null)

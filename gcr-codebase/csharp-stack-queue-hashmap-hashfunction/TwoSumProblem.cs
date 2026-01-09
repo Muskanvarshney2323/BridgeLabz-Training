@@ -3,24 +3,10 @@ using System.Collections.Generic;
 
 namespace HashMapProblems
 {
-    /// <summary>
-    /// Problem 5: Two Sum Problem
-    /// 
-    /// Given an array and a target sum, find two indices such that their values add up to the target.
-    /// 
-    /// Hint: Use a hash map to store the index of each element as you iterate. 
-    /// Check if target - current_element exists in the map.
-    /// 
-    /// Time Complexity: O(n) where n is the length of the array
-    /// Space Complexity: O(n) for the hash map
-    /// </summary>
+ 
     public class TwoSumProblem
     {
-        /// <summary>
-        /// Find two indices whose values add up to target
-        /// Returns an array of two indices [i, j] where i < j
-        /// Throws exception if no such pair exists
-        /// </summary>
+        
         public static int[] TwoSum(int[] nums, int target)
         {
             if (nums == null || nums.Length < 2)

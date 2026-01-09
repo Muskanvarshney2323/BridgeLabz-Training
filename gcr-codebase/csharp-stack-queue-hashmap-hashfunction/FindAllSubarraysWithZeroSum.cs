@@ -3,17 +3,6 @@ using System.Collections.Generic;
 
 namespace HashMapProblems
 {
-    /// <summary>
-    /// Problem 1: Find All Subarrays with Zero Sum
-    /// 
-    /// Given an array, find all subarrays whose elements sum up to zero.
-    /// 
-    /// Hint: Use a hash map to store the cumulative sum and its frequency. 
-    /// If a sum repeats, a zero-sum subarray exists.
-    /// 
-    /// Time Complexity: O(n) where n is the length of the array
-    /// Space Complexity: O(n) for the hash map
-    /// </summary>
     public class FindAllSubarraysWithZeroSum
     {
         /// <summary>

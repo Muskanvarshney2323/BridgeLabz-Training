@@ -4,25 +4,10 @@ using System.Linq;
 
 namespace HashMapProblems
 {
-    /// <summary>
-    /// Problem 3: Longest Consecutive Sequence
-    /// 
-    /// Given an unsorted array, find the length of the longest consecutive elements sequence.
-    /// 
-    /// Hint: Use a hash map to store elements and check for consecutive elements efficiently.
-    /// 
-    /// Time Complexity: O(n) where n is the length of the array
-    /// Space Complexity: O(n) for the hash set
-    /// </summary>
+
     public class LongestConsecutiveSequence
     {
-        /// <summary>
-        /// Find the length of the longest consecutive sequence
-        /// 
-        /// Example: nums = [100, 4, 200, 1, 3, 2]
-        /// Output: 4 (sequence: [1, 2, 3, 4])
-        /// </summary>
-        public static int LongestConsecutive(int[] nums)
+             public static int LongestConsecutive(int[] nums)
         {
             if (nums == null || nums.Length == 0)
                 return 0;
@@ -233,7 +218,7 @@ namespace HashMapProblems
 
             Console.WriteLine("\n" + new string('-', 50) + "\n");
 
-            int[] nums2 = { 9, 1,4, 7, 3,2, 8, 5, 6 };
+            int[] nums2 = { 9, 1, 4, 7, 3,2, 8, 5, 6 };
             Console.WriteLine($"Array: [{string.Join(", ", nums2)}]");
             Console.WriteLine($"Length of longest consecutive sequence: {LongestConsecutiveSequence.LongestConsecutive(nums2)}");
             Console.WriteLine($"Sequence: [{string.Join(", ", LongestConsecutiveSequence.LongestConsecutiveSequenceList(nums2))}]");

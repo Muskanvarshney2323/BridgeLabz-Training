@@ -3,22 +3,10 @@ using System.Collections.Generic;
 
 namespace HashMapProblems
 {
-    /// <summary>
-    /// Problem 2: Check for a Pair with Given Sum in an Array
-    /// 
-    /// Given an array and a target sum, find if there exists a pair of elements whose sum is equal to the target.
-    /// 
-    /// Hint: Store visited numbers in a hash map and check if target - current_number exists in the map.
-    /// 
-    /// Time Complexity: O(n) where n is the length of the array
-    /// Space Complexity: O(n) for the hash map
-    /// </summary>
+
     public class CheckForPairWithGivenSum
     {
-        /// <summary>
-        /// Check if a pair with given sum exists in the array
-        /// Returns true if pair exists, false otherwise
-        /// </summary>
+      
         public static bool PairExists(int[] nums, int target)
         {
             if (nums == null || nums.Length < 2)
@@ -41,10 +29,7 @@ namespace HashMapProblems
             return false;
         }
 
-        /// <summary>
-        /// Find and return the pair with given sum
-        /// Returns a tuple (num1, num2) if pair exists, or (int.MinValue, int.MinValue) if not found
-        /// </summary>
+     
         public static (int, int) FindPair(int[] nums, int target)
         {
             if (nums == null || nums.Length < 2)
@@ -65,10 +50,7 @@ namespace HashMapProblems
             return (int.MinValue, int.MinValue);
         }
 
-        /// <summary>
-        /// Find all pairs with given sum (handles duplicates)
-        /// Returns a list of pairs
-        /// </summary>
+   
         public static List<(int, int)> FindAllPairs(int[] nums, int target)
         {
             List<(int, int)> result = new List<(int, int)>();
@@ -103,10 +85,7 @@ namespace HashMapProblems
             return result;
         }
 
-        /// <summary>
-        /// Find indices of a pair with given sum
-        /// Returns a tuple (index1, index2) if pair exists, or (-1, -1) if not found
-        /// </summary>
+   
         public static (int, int) FindPairIndices(int[] nums, int target)
         {
             if (nums == null || nums.Length < 2)
