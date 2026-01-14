@@ -1,30 +1,56 @@
 using System;
+using System.Collections.Generic;
 
-class AddressBook : IAddressBook
+class AddressBook
 {
-    // Storage for contacts
-    private ContactPerson[] contacts;
-    private int count;
+    private List<ContactPerson> contacts = new List<ContactPerson>();
 
-    // Constructor
-    public AddressBook()
+    public void AddContact(ContactPerson person)
     {
-        contacts = new ContactPerson[10]; // fixed size for UC-1
-        count = 0;
+        contacts.Add(person);
     }
 
-    // Business logic: Add contact
-    public void AddContactPerson(ContactPerson person)
+    public void EditContact(string firstName)
     {
-        if (count >= contacts.Length)
+        foreach (ContactPerson person in contacts)
         {
-            Console.WriteLine("Address Book is full. Cannot add more contacts.");
-            return;
+            if (person.FirstName.Equals(firstName, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.Write("Enter New Address: ");
+                person.Address = Console.ReadLine();
+
+                Console.Write("Enter New City: ");
+                person.City = Console.ReadLine();
+
+                Console.Write("Enter New State: ");
+                person.State = Console.ReadLine();
+
+                Console.Write("Enter New Zip: ");
+                person.Zip = Console.ReadLine();
+
+                Console.Write("Enter New Phone Number: ");
+                person.PhoneNumber = Console.ReadLine();
+
+                Console.Write("Enter New Email: ");
+                person.Email = Console.ReadLine();
+
+                Console.WriteLine("Contact updated successfully.");
+                return;
+            }
         }
-
-        contacts[count] = person;
-        count++;
-
-        Console.WriteLine("Contact Person Added Successfully");
+        Console.WriteLine("Contact not found.");
+    }
+    public void DeleteContact(string firstName)
+    {
+        for (int i = 0; i < contacts.Count; i++)
+        {
+            if (contacts[i].FirstName.Equals(firstName, StringComparison.OrdinalIgnoreCase))
+            {
+                contacts.RemoveAt(i);
+                Console.WriteLine("Contact deleted successfully.");
+                return;
+            }
+        }
+        Console.WriteLine("Contact not found.");
     }
 }
