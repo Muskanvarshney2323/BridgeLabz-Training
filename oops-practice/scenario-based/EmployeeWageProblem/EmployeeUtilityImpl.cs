@@ -16,7 +16,6 @@ public class EmployeeUtilityImpl : IEmployee
         Console.Write("Is Employee Present? (yes/no): ");
         bool present = Console.ReadLine().ToLower() == "yes";
 
-        // constructor
         Employee emp = new Employee(id, name, present);
         employees.Add(emp);
 
