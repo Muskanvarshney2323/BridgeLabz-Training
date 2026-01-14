@@ -1,54 +1,69 @@
 using System;
 using System.Diagnostics;
 
-namespace BridgeLabz.AlgorithmRuntimeAnalysis
+class FibonacciPerformanceTest
 {
-    // Compare naive recursive Fibonacci vs iterative approach
-    public static class FibonacciRecursiveVsIterative
+    static void Main(string[] args)
     {
-        public static long FibonacciRecursive(int n)
+        int[] inputs = { 10, 30, 50 };
+
+        Console.WriteLine("Value\tRecursive(ms)\tIterative(ms)");
+
+        foreach (var value in inputs)
         {
-            if (n <= 1) return n;
-            return FibonacciRecursive(n - 1) + FibonacciRecursive(n - 2);
+            long recTime = CalculateRecursiveTime(value);
+            long itrTime = CalculateIterativeTime(value);
+
+            Console.WriteLine($"{value}\t{recTime}\t\t{itrTime}");
+        }
+    }
+
+    // Recursive approach (Exponential Time Complexity)
+    static int GetFibonacciRecursively(int num)
+    {
+        if (num < 2)
+            return num;
+
+        return GetFibonacciRecursively(num - 1) + GetFibonacciRecursively(num - 2);
+    }
+
+    // Iterative approach (Linear Time Complexity)
+    static int GetFibonacciIteratively(int num)
+    {
+        if (num < 2)
+            return num;
+
+        int first = 0;
+        int second = 1;
+
+        for (int i = 2; i <= num; i++)
+        {
+            int next = first + second;
+            first = second;
+            second = next;
         }
 
-        public static long FibonacciIterative(int n)
-        {
-            if (n <= 1) return n;
-            long a = 0, b = 1;
-            for (int i = 2; i <= n; i++) { long sum = a + b; a = b; b = sum; }
-            return b;
-        }
+        return second;
+    }
 
-        static void Bench(int n)
-        {
-            Console.WriteLine($"--- Fibonacci N={n} ---");
-            var sw = new Stopwatch();
+    static long CalculateRecursiveTime(int num)
+    {
+        if (num > 40)
+            return -1; // avoiding heavy computation
 
-            if (n <= 40) // recursive grows exponentially — keep it safe
-            {
-                sw.Restart();
-                var r = FibonacciRecursive(n);
-                sw.Stop(); Console.WriteLine($"Recursive: {r} in {sw.Elapsed.TotalMilliseconds:F4} ms");
-            }
-            else
-            {
-                Console.WriteLine("Recursive: Unfeasible (exponential time) — skipped");
-            }
+        Stopwatch timer = Stopwatch.StartNew();
+        GetFibonacciRecursively(num);
+        timer.Stop();
 
-            sw.Restart();
-            var it = FibonacciIterative(n);
-            sw.Stop(); Console.WriteLine($"Iterative: {it} in {sw.Elapsed.TotalMilliseconds:F4} ms");
-            Console.WriteLine();
-        }
+        return timer.ElapsedMilliseconds;
+    }
 
-        public static void Main()
-        {
-            Console.WriteLine("Fibonacci: Recursive vs Iterative");
-            Bench(10);
-            Bench(30);
-            Bench(50);
-            Console.WriteLine("Expected: recursive is infeasible for large N; iterative is linear and fast.");
-        }
+    static long CalculateIterativeTime(int num)
+    {
+        Stopwatch timer = Stopwatch.StartNew();
+        GetFibonacciIteratively(num);
+        timer.Stop();
+
+        return timer.ElapsedMilliseconds;
     }
 }

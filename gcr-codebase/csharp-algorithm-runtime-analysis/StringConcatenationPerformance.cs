@@ -2,54 +2,71 @@ using System;
 using System.Diagnostics;
 using System.Text;
 
-namespace BridgeLabz.AlgorithmRuntimeAnalysis
+class StringAppendPerformanceTest
 {
-    // Compare string concatenation vs StringBuilder for concatenating many small strings
-    public static class StringConcatenationPerformance
+    private static readonly object syncLock = new object();
+
+    static void Main(string[] args)
     {
-        static string BuildWithString(int n)
+        int[] counts = { 1000, 10000, 1000000 };
+
+        Console.WriteLine("Count\tString(ms)\tStringBuilder(ms)\tThreadSafeBuilder(ms)");
+
+        foreach (int count in counts)
         {
-            string s = string.Empty;
-            for (int i = 0; i < n; i++) s += i.ToString();
-            return s;
+            long normalStr = MeasureStringConcat(count);
+            long fastBuilder = MeasureBuilderConcat(count);
+            long safeBuilder = MeasureThreadSafeConcat(count);
+
+            Console.WriteLine($"{count}\t{normalStr}\t\t{fastBuilder}\t\t\t{safeBuilder}");
+        }
+    }
+
+    // Immutable String concatenation (Quadratic time)
+    static long MeasureStringConcat(int times)
+    {
+        Stopwatch watch = Stopwatch.StartNew();
+        string text = string.Empty;
+
+        for (int i = 0; i < times; i++)
+        {
+            text = text + "x";
         }
 
-        static string BuildWithStringBuilder(int n)
+        watch.Stop();
+        return watch.ElapsedMilliseconds;
+    }
+
+    // Mutable StringBuilder (Linear time)
+    static long MeasureBuilderConcat(int times)
+    {
+        Stopwatch watch = Stopwatch.StartNew();
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i < times; i++)
         {
-            var sb = new StringBuilder();
-            for (int i = 0; i < n; i++) sb.Append(i);
-            return sb.ToString();
+            builder.Append("x");
         }
 
-        static void Bench(int n)
-        {
-            Console.WriteLine($"--- Concatenation N={n} ---");
-            var sw = new Stopwatch();
+        watch.Stop();
+        return watch.ElapsedMilliseconds;
+    }
 
-            try
+    // Thread-safe simulation using lock
+    static long MeasureThreadSafeConcat(int times)
+    {
+        Stopwatch watch = Stopwatch.StartNew();
+        StringBuilder sharedBuilder = new StringBuilder();
+
+        for (int i = 0; i < times; i++)
+        {
+            lock (syncLock)
             {
-                sw.Restart();
-                var a = BuildWithString(n);
-                sw.Stop(); Console.WriteLine($"string concatenation: {sw.Elapsed.TotalMilliseconds:F4} ms");
+                sharedBuilder.Append("x");
             }
-            catch (OutOfMemoryException)
-            {
-                Console.WriteLine("string concatenation: Unusable (OOM)");
-            }
-
-            sw.Restart();
-            var b = BuildWithStringBuilder(n);
-            sw.Stop(); Console.WriteLine($"StringBuilder: {sw.Elapsed.TotalMilliseconds:F4} ms");
-            Console.WriteLine();
         }
 
-        public static void Main()
-        {
-            Console.WriteLine("String concatenation performance: string vs StringBuilder");
-            Bench(1_000);
-            Bench(10_000);
-            Bench(1_000_000);
-            Console.WriteLine("Expected: StringBuilder is far more efficient for large N.");
-        }
+        watch.Stop();
+        return watch.ElapsedMilliseconds;
     }
 }
