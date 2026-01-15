@@ -26,7 +26,6 @@ class AddressBookMenu
 
             switch (choice)
             {
-                // ===== UC-6 START =====
                 case 1:
                     Console.Write("Enter Address Book Name: ");
                     system.AddAddressBook(Console.ReadLine());
@@ -34,34 +33,27 @@ class AddressBookMenu
 
                 case 2:
                     Console.Write("Enter Address Book Name: ");
-                    addressBook = system.GetAddressBook(Console.ReadLine());
-                    break;
-                // ===== UC-6 END =====
+                    string name = Console.ReadLine();
+                    AddressBook book = system.GetAddressBook(name);
 
-                case 3:
-                    if (addressBook == null)
-                    {
-                        Console.WriteLine("Select Address Book first.");
-                        break;
-                    }
-                    ContactPerson person = utility.GetContactDetails();
-                    addressBook.AddContact(person);
+                    if (book != null)
+                        book.AddContact(utility.GetContactDetails());
+                    else
+                        Console.WriteLine("Address Book not found.");
                     break;
 
-                case 4:
-                    Console.Write("Enter First Name: ");
-                    addressBook.EditContact(Console.ReadLine());
+                case 3:   // UC8
+                    Console.Write("Enter City: ");
+                    system.SearchPersonByCity(Console.ReadLine());
+                    break;
+
+                case 4:   // UC8
+                    Console.Write("Enter State: ");
+                    system.SearchPersonByState(Console.ReadLine());
                     break;
 
                 case 5:
-                    Console.Write("Enter First Name: ");
-                    addressBook.DeleteContact(Console.ReadLine());
-                    break;
-
-                case 6:
-                    exit = true;
-                    Console.WriteLine("Exiting...");
-                    break;
+                    return;
             }
         }
     }

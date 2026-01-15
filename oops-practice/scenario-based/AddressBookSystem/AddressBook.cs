@@ -14,14 +14,48 @@ class AddressBook
     // UC-1, UC-2, UC-5 : Add Contact
     public void AddContact(ContactPerson person)
     {
-        if (count >= contacts.Length)
+       // ================= UC7 =================
+        // Duplicate check using array + Equals()
+        for (int i = 0; i < count; i++)
         {
-            Console.WriteLine("Address Book is full.");
-            return;
+            if (contacts[i].Equals(person))
+            {
+                Console.WriteLine("Duplicate contact found. Person already exists.");
+                return;
+            }
         }
 
         contacts[count] = person;
         count++;
+    }
+    // ================= UC8 =================
+    // Search person by City
+    public void SearchByCity(string city)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            if (contacts[i].City.Equals(city, StringComparison.OrdinalIgnoreCase))
+            {
+                PrintContact(contacts[i]);
+            }
+        }
+    }
+
+    // Search person by State
+    public void SearchByState(string state)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            if (contacts[i].State.Equals(state, StringComparison.OrdinalIgnoreCase))
+            {
+                PrintContact(contacts[i]);
+            }
+        }
+    }
+
+    private void PrintContact(ContactPerson p)
+    {
+        Console.WriteLine($"{p.FirstName} {p.LastName} | {p.City} | {p.State} | {p.PhoneNumber}");
     }
 
     // UC-3 : Edit Contact
