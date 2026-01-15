@@ -2,55 +2,65 @@ using System;
 
 class AddressBookMenu
 {
-    private IAddressBookUtility utility;
-    private AddressBook addressBook;
-
-    public AddressBookMenu()
+    public void ShowMenu()
     {
-        utility = new AddressBookUtility();
-        addressBook = new AddressBook();
-    }
+        Console.WriteLine("Welcome to Address Book Program");
 
-    public void ShowMenu()   // ✅ menu method, NOT Main
-    {
-        while (true)
+        AddressBookSystem system = new AddressBookSystem();   // UC-6
+        AddressBook addressBook = null;
+        IAddressBookUtility utility = new AddressBookUtility();
+
+        bool exit = false;
+
+        while (!exit)
         {
-            Console.WriteLine("\nWelcome to Address Book Program");
-            Console.WriteLine("\n----- MENU -----");
-            Console.WriteLine("1. Add Contact");
-            Console.WriteLine("2. Edit Contact");
-            Console.WriteLine("3. Delete Contact");
-            Console.WriteLine("4. Exit");
-            Console.Write("Enter your choice: ");
+            Console.WriteLine("\n1. Create Address Book");
+            Console.WriteLine("2. Select Address Book");
+            Console.WriteLine("3. Add Contact");
+            Console.WriteLine("4. Edit Contact");
+            Console.WriteLine("5. Delete Contact");
+            Console.WriteLine("6. Exit");
 
+            Console.Write("Enter choice: ");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             switch (choice)
             {
+                // ===== UC-6 START =====
                 case 1:
-                    ContactPerson person = utility.GetContactDetails();
-                    addressBook.AddContact(person);
-                    utility.ShowMessage("Contact added successfully.");
+                    Console.Write("Enter Address Book Name: ");
+                    system.AddAddressBook(Console.ReadLine());
                     break;
 
                 case 2:
-                    Console.Write("Enter First Name to edit: ");
-                    string editName = Console.ReadLine();
-                    addressBook.EditContact(editName);
+                    Console.Write("Enter Address Book Name: ");
+                    addressBook = system.GetAddressBook(Console.ReadLine());
                     break;
+                // ===== UC-6 END =====
 
                 case 3:
-                    Console.Write("Enter First Name to delete: ");
-                    string deleteName = Console.ReadLine();
-                    addressBook.DeleteContact(deleteName);
+                    if (addressBook == null)
+                    {
+                        Console.WriteLine("Select Address Book first.");
+                        break;
+                    }
+                    ContactPerson person = utility.GetContactDetails();
+                    addressBook.AddContact(person);
                     break;
 
                 case 4:
-                    Console.WriteLine("Exiting Address Book Program");
-                    return;
+                    Console.Write("Enter First Name: ");
+                    addressBook.EditContact(Console.ReadLine());
+                    break;
 
-                default:
-                    Console.WriteLine("Invalid choice.");
+                case 5:
+                    Console.Write("Enter First Name: ");
+                    addressBook.DeleteContact(Console.ReadLine());
+                    break;
+
+                case 6:
+                    exit = true;
+                    Console.WriteLine("Exiting...");
                     break;
             }
         }
