@@ -1,15 +1,14 @@
 using System;
-using System.Collections.Generic;
 
 public class BookLibraryUtility
 {
-    private Dictionary<string, BookLinkedList> genreCatalog;
-    private HashSet<string> isbns; // To avoid duplication
+    private CustomDictionary genreCatalog;
+    private CustomHashSet isbns; // To avoid duplication
 
     public BookLibraryUtility()
     {
-        this.genreCatalog = new Dictionary<string, BookLinkedList>();
-        this.isbns = new HashSet<string>();
+        genreCatalog = new CustomDictionary();
+        isbns = new CustomHashSet();
     }
 
     // Add book to the catalog
@@ -25,11 +24,12 @@ public class BookLibraryUtility
 
         if (!genreCatalog.ContainsKey(genre))
         {
-            genreCatalog[genre] = new BookLinkedList();
+            genreCatalog.Put(genre, new BookLinkedList());
         }
 
-        genreCatalog[genre].AddBook(book);
+        genreCatalog.Get(genre).AddBook(book);
         isbns.Add(isbn);
+
         Console.WriteLine($"Book '{title}' added successfully to {genre} genre.");
     }
 
@@ -42,7 +42,7 @@ public class BookLibraryUtility
             return;
         }
 
-        BookLinkedList list = genreCatalog[genre];
+        BookLinkedList list = genreCatalog.Get(genre);
         Book book = list.SearchBook(title);
 
         if (book != null && list.RemoveBook(title))
@@ -50,11 +50,10 @@ public class BookLibraryUtility
             isbns.Remove(book.GetISBN());
             Console.WriteLine($"Book '{title}' removed successfully from {genre}.");
 
-            // Remove genre if list is empty
             if (list.IsEmpty())
             {
                 genreCatalog.Remove(genre);
-                Console.WriteLine($"Genre '{genre}' has been removed (no books left).");
+                Console.WriteLine($"Genre '{genre}' removed (no books left).");
             }
         }
         else
@@ -73,10 +72,10 @@ public class BookLibraryUtility
         }
 
         Console.WriteLine($"\n--- Books in {genre} ---");
-        genreCatalog[genre].DisplayBooks();
+        genreCatalog.Get(genre).DisplayBooks();
     }
 
-    // Search book by title in a specific genre
+    // Search book by title
     public void SearchBook(string genre, string title)
     {
         if (!genreCatalog.ContainsKey(genre))
@@ -85,7 +84,7 @@ public class BookLibraryUtility
             return;
         }
 
-        Book book = genreCatalog[genre].SearchBook(title);
+        Book book = genreCatalog.Get(genre).SearchBook(title);
         if (book != null)
         {
             Console.WriteLine("Book found:");
@@ -100,56 +99,60 @@ public class BookLibraryUtility
     // Display all genres
     public void DisplayAllGenres()
     {
-        if (genreCatalog.Count == 0)
+        if (genreCatalog.GetCount() == 0)
         {
             Console.WriteLine("No genres in the catalog.");
             return;
         }
 
-        Console.WriteLine("\n--- All Genres in Catalog ---");
+        Console.WriteLine("\n--- All Genres ---");
+        string[] genres = genreCatalog.GetAllKeys();
+
         int index = 1;
-        foreach (var genre in genreCatalog.Keys)
+        foreach (string genre in genres)
         {
-            int bookCount = genreCatalog[genre].GetCount();
-            Console.WriteLine($"{index}. {genre} ({bookCount} books)");
+            int count = genreCatalog.Get(genre).GetCount();
+            Console.WriteLine($"{index}. {genre} ({count} books)");
             index++;
         }
     }
 
-    // Borrow book (remove from catalog)
+    // Borrow book
     public void BorrowBook(string genre, string title)
     {
         RemoveBook(genre, title);
-        Console.WriteLine($"Book '{title}' borrowed from {genre}.");
     }
 
-    // Return book (add to catalog)
+    // Return book
     public void ReturnBook(string title, string author, string genre, string isbn)
     {
         AddBook(title, author, genre, isbn);
-        Console.WriteLine($"Book '{title}' returned to {genre}.");
     }
 
-    // Get total book count
+    // Total book count
     public int GetTotalBookCount()
     {
         int total = 0;
-        foreach (var list in genreCatalog.Values)
+        string[] genres = genreCatalog.GetAllKeys();
+
+        foreach (string genre in genres)
         {
-            total += list.GetCount();
+            total += genreCatalog.Get(genre).GetCount();
         }
+
         return total;
     }
 
-    // Display catalog statistics
+    // Display statistics
     public void DisplayStatistics()
     {
         Console.WriteLine("\n--- Library Statistics ---");
-        Console.WriteLine($"Total Genres: {genreCatalog.Count}");
         Console.WriteLine($"Total Books: {GetTotalBookCount()}");
-        foreach (var genre in genreCatalog.Keys)
+
+        string[] genres = genreCatalog.GetAllKeys();
+        foreach (string genre in genres)
         {
-            Console.WriteLine($"  {genre}: {genreCatalog[genre].GetCount()} books");
+            Console.WriteLine($"  {genre}: {genreCatalog.Get(genre).GetCount()} books");
         }
     }
 }
