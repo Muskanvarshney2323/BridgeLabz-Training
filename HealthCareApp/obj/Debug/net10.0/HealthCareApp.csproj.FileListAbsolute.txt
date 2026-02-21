@@ -1,5 +1,0 @@
-C:\BridgeLabz-Training\HealthCareApp\obj\Debug\net10.0\HealthCareApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\BridgeLabz-Training\HealthCareApp\obj\Debug\net10.0\HealthCareApp.AssemblyInfoInputs.cache
-C:\BridgeLabz-Training\HealthCareApp\obj\Debug\net10.0\HealthCareApp.AssemblyInfo.cs
-C:\BridgeLabz-Training\HealthCareApp\obj\Debug\net10.0\HealthCareApp.csproj.CoreCompileInputs.cache
-C:\BridgeLabz-Training\HealthCareApp\obj\Debug\net10.0\HealthCareApp.sourcelink.json
