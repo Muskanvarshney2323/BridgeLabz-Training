@@ -1,4 +1,4 @@
-# BridgeLabz-Training
+��# BridgeLabz-Training
 📅 Day 1 – Training Summary
 
 Date: 16 December 2025
@@ -854,7 +854,7 @@ Start learning Annotations and Reflection in C#
 
 ⚠️ User-Defined Exceptions – Creating custom exception classes
 
-🏷️ Annotations (Attributes) – Understanding metadata in C#
+🏷️ Annotations (Attributes– Understanding metadata in C#
 
 ✅ Work Completed
 
@@ -866,4 +866,4 @@ Learned and practiced using annotations in C# programs
 
 Explore Reflection, Regular Expressions (Regex), and NUnit Testing
 
-
+
