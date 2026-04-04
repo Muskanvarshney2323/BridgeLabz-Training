@@ -1,0 +1,4 @@
+interface ITrackable
+{
+    void TrackProgress();
+}
