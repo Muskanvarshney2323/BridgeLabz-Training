@@ -1,4 +1,4 @@
-��# BridgeLabz-Training
+BridgeLabz-Training
 📅 Day 1 – Training Summary
 
 Date: 16 December 2025
@@ -51,8 +51,7 @@ Solved 10 Core Java programming questions
 
 Ensured all programs compiled and executed correctly
 
-Organized code under:
-core-java-practice/gcr-codebase/programming-elements
+Organized code under: core-java-practice/gcr-codebase/programming-elements
 
 Committed and pushed all solutions to GitHub
 
@@ -112,8 +111,7 @@ Day 4 focused on strengthening C# core concepts, including data types, operators
 
 Learned C# data types and naming conventions
 
-Studied all operator types:
-Arithmetic, Relational, Logical, Assignment, Unary, Ternary, Bitwise
+Studied all operator types: Arithmetic, Relational, Logical, Assignment, Unary, Ternary, Bitwise
 
 Understood and practiced access modifiers
 
@@ -283,8 +281,7 @@ Date: 29 December 2025
 
 Day 10 concentrated on solving real-life scenario-based programming problems using Strings and Arrays in C#, with emphasis on data processing, text manipulation, and handling edge cases.
 
-🔹 Scenarios & Key Concepts
-1️⃣ Strings – Sentence Formatter
+🔹 Scenarios & Key Concepts 1️⃣ Strings – Sentence Formatter
 
 Created a method to improve poorly formatted text input by:
 
@@ -354,13 +351,9 @@ The completed work was successfully pushed to GitHub
 
 ✅ Day 10 successfully completed
 
+📅 Day 11 – December 30, 2025 🧩 Focus Areas
 
-📅 Day 11 – December 30, 2025
-🧩 Focus Areas
-
-📚 Scenario-driven Projects – Role-based Quiz Application & Library Management System
-🏗️ Constructors in C# – Understanding and applying constructors through practical examples
-🔐 Role-based Authentication – Implementing access control in applications
+📚 Scenario-driven Projects – Role-based Quiz Application & Library Management System 🏗️ Constructors in C# – Understanding and applying constructors through practical examples 🔐 Role-based Authentication – Implementing access control in applications
 
 ✅ Work Accomplished
 
@@ -378,12 +371,9 @@ Begin learning the core pillars of OOP: Encapsulation, Inheritance, Polymorphism
 
 Solve advanced real-world problems using OOP concepts
 
-📅 Day 12 – December 31, 2025
-🧩 Focus Areas
+📅 Day 12 – December 31, 2025 🧩 Focus Areas
 
-🧠 Object-Oriented Programming – Strengthening conceptual understanding
-🔑 this, static, sealed Keywords – Practical usage and real-world relevance
-🏦 Scenario-based Applications – Hands-on application of OOP concepts
+🧠 Object-Oriented Programming – Strengthening conceptual understanding 🔑 this, static, sealed Keywords – Practical usage and real-world relevance 🏦 Scenario-based Applications – Hands-on application of OOP concepts
 
 ✅ Work Accomplished
 
@@ -405,13 +395,9 @@ Officially start working on the Pillars of OOP
 
 Implement Encapsulation, Inheritance, Polymorphism, and Abstraction in practical projects
 
-📅 Day 13 – January 1, 2026
-🧩 Focus Areas
+📅 Day 13 – January 1, 2026 🧩 Focus Areas
 
-🧩 Scenario-based Problem Solving – Enhancing analytical and design thinking
-🧱 Object Modeling – Mapping real-world problems into objects
-📐 Class Diagrams – Visualizing classes and their relationships
-🔄 Sequence Diagrams – Understanding object interaction flow
+🧩 Scenario-based Problem Solving – Enhancing analytical and design thinking 🧱 Object Modeling – Mapping real-world problems into objects 📐 Class Diagrams – Visualizing classes and their relationships 🔄 Sequence Diagrams – Understanding object interaction flow
 
 ✅ Work Accomplished
 
@@ -429,12 +415,9 @@ Start learning Encapsulation in OOP
 
 Apply encapsulation concepts in real-world C# scenarios
 
-📅 Day 14 – January 2, 2026
-🧩 Focus Areas
+📅 Day 14 – January 2, 2026 🧩 Focus Areas
 
-🌳 Inheritance in C# – Base and derived class relationships
-🛠️ Types of Inheritance – Single, multilevel, and hierarchical
-🎯 Scenario-based Implementation – Practical inheritance examples
+🌳 Inheritance in C# – Base and derived class relationships 🛠️ Types of Inheritance – Single, multilevel, and hierarchical 🎯 Scenario-based Implementation – Practical inheritance examples
 
 ✅ Work Accomplished
 
@@ -454,11 +437,9 @@ Move forward to the next OOP pillar
 
 Apply newly learned concepts in practical applications
 
-📅 Day 15 – January 3, 2026
-🧩 Focus Areas
+📅 Day 15 – January 3, 2026 🧩 Focus Areas
 
-🔁 OOP Revision – Reviewing all covered concepts
-🧠 Practice & Strengthening – Solving problems to solidify understanding
+🔁 OOP Revision – Reviewing all covered concepts 🧠 Practice & Strengthening – Solving problems to solidify understanding
 
 ✅ Work Accomplished
 
@@ -472,14 +453,9 @@ Begin learning Polymorphism
 
 Explore method overloading, overriding, and real-life implementations
 
-📅 Day 16 – January 5, 2026
-🧩 Focus Areas
+📅 Day 16 – January 5, 2026 🧩 Focus Areas
 
-🔐 Encapsulation – Protecting data using access modifiers
-🛡️ Abstraction – Simplifying systems by hiding implementation details
-🔄 Polymorphism – Compile-time and runtime behavior
-📦 Abstract Classes & Interfaces – Defining reusable structures
-🌍 Real-life Applications – Applying OOP pillars in scenarios
+🔐 Encapsulation – Protecting data using access modifiers 🛡️ Abstraction – Simplifying systems by hiding implementation details 🔄 Polymorphism – Compile-time and runtime behavior 📦 Abstract Classes & Interfaces – Defining reusable structures 🌍 Real-life Applications – Applying OOP pillars in scenarios
 
 ✅ Work Accomplished
 
@@ -497,12 +473,9 @@ Start Data Structures & Algorithms (DSA)
 
 Focus on arrays, linked lists, and basic problem-solving
 
-📅 Day 17 – January 6, 2026
-🧩 Focus Areas
+📅 Day 17 – January 6, 2026 🧩 Focus Areas
 
-🔁 Comprehensive OOP Revision
-🧠 Scenario-based Practice
-🗣️ Feedback & Review Session
+🔁 Comprehensive OOP Revision 🧠 Scenario-based Practice 🗣️ Feedback & Review Session
 
 ✅ Work Accomplished
 
@@ -518,12 +491,9 @@ Begin DSA fundamentals
 
 Focus on structured problem-solving techniques
 
-📅 Day 18 – January 7, 2026
-🧩 Focus Areas
+📅 Day 18 – January 7, 2026 🧩 Focus Areas
 
-🔗 Linked Lists – Singly, Doubly, and Circular
-⚙️ Operations – Insertion, deletion, traversal, searching
-🧠 Real-life Applications using Linked Lists
+🔗 Linked Lists – Singly, Doubly, and Circular ⚙️ Operations – Insertion, deletion, traversal, searching 🧠 Real-life Applications using Linked Lists
 
 ✅ Work Accomplished
 
@@ -541,13 +511,9 @@ Learn Stack and Queue data structures
 
 Practice implementations and real-life use cases
 
-📅 Day 19 – January 8, 2026
-🧩 Focus Areas
+📅 Day 19 – January 8, 2026 🧩 Focus Areas
 
-📚 Stack – Concepts and operations
-🚦 Queue – Types and working principles
-🗂️ HashMap & Hashing – Key-value storage techniques
-🏠 Mini Project – Smart Home Appliance System
+📚 Stack – Concepts and operations 🚦 Queue – Types and working principles 🗂️ HashMap & Hashing – Key-value storage techniques 🏠 Mini Project – Smart Home Appliance System
 
 ✅ Work Accomplished
 
@@ -565,11 +531,9 @@ Advance further in DSA
 
 Solve more complex data-structure-based problems
 
-📅 Day 20 – January 9, 2026
-🧩 Focus Areas
+📅 Day 20 – January 9, 2026 🧩 Focus Areas
 
-🧮 Sorting Algorithms – Understanding various sorting techniques
-🏧 Scenario-based Applications
+🧮 Sorting Algorithms – Understanding various sorting techniques 🏧 Scenario-based Applications
 
 ✅ Work Accomplished
 
@@ -585,11 +549,9 @@ Learn runtime analysis
 
 Study asymptotic notations (Big O, Big Ω, Big Θ)
 
-📅 Day 21 – January 10, 2026
-🧩 Focus Areas
+📅 Day 21 – January 10, 2026 🧩 Focus Areas
 
-📚 Weekly DSA Revision
-🧮 LeetCode Array Challenges
+📚 Weekly DSA Revision 🧮 LeetCode Array Challenges
 
 ✅ Work Accomplished
 
@@ -603,13 +565,9 @@ Learn searching algorithms in arrays
 
 Practice efficient input handling using BufferedReader in C#
 
-📅 Day 22 – January 12, 2026
-🧩 Focus Areas
+📅 Day 22 – January 12, 2026 🧩 Focus Areas
 
-🔍 Searching Algorithms – Linear and Binary Search
-💬 String vs StringBuilder – Comparison and use cases
-🖥️ BufferedReader in C# – Efficient input reading
-🌍 Scenario-based Applications
+🔍 Searching Algorithms – Linear and Binary Search 💬 String vs StringBuilder – Comparison and use cases 🖥️ BufferedReader in C# – Efficient input reading 🌍 Scenario-based Applications
 
 ✅ Work Accomplished
 
@@ -626,244 +584,3 @@ LoanBuddy – Automated Loan Approval System
 Metal Factory Pipe Cutting
 
 Custom Furniture Manufacturing
-
-📆 Day 23 – January 13, 2026
-🔍 Focus Areas
-
-⏳ Algorithm Performance Analysis – Studying how efficiently algorithms run
-
-📈 Time Complexity Evaluation – Comparing different approaches based on execution time
-
-🌐 Real-World Case Studies – Applying complexity analysis to practical applications
-
-💻 LeetCode Practice – Enhancing problem-solving skills through coding challenges
-
-✅ Work Completed
-
-Gained a clear understanding of run-time analysis and evaluated time complexity for multiple algorithms
-
-Designed and solved two real-life based applications:
-
-BookBuddy – A digital book management system
-
-CinemaTime – A movie scheduling and management tool
-
-Practiced several LeetCode problems to strengthen algorithmic logic
-
-⏭️ Upcoming Plan
-
-Begin learning Tree data structures
-
-Implement tree traversals and solve related problems
-
-📆 Day 24 – January 14, 2026
-🔍 Focus Areas
-
-📖 Address Book Application – Developing a complete console-based system
-
-🛠️ Feature Development – CRUD operations, searching, sorting, and counting contacts
-
-🖥️ Menu-Based Navigation – Managing multiple address books interactively
-
-💻 LeetCode Practice – Continuous coding practice
-
-✅ Work Completed
-
-Built a fully functional console-based Address Book System
-
-Implemented features like add, update, delete, search, view, sort, and count contacts
-
-Added menu-driven options to manage multiple address books efficiently
-
-Solved LeetCode problems to improve coding proficiency
-
-⏭️ Upcoming Plan
-
-Refactor the Address Book System and add advanced features
-
-Continue practicing LeetCode problems
-
-📆 Day 25 – January 15, 2026
-🔍 Focus Areas
-
-🔁 Weekly Review – Revisiting all concepts learned during the week
-
-🎯 Scenario-Based Exercises – Solving practical problems
-
-📘 Address Book Improvements – Enhancing functionality
-
-✅ Work Completed
-
-Revised all topics covered during the week to reinforce concepts
-
-Solved scenario-based problems including Tab History Manager
-
-Improved usability and added new features to the Address Book System
-
-⏭️ Upcoming Plan
-
-Progress further into advanced DSA topics
-
-Start solving problems related to trees, graphs, and complex data structures
-
-📆 Day 26 – January 16, 2026
-🔍 Focus Areas
-
-🧠 Advanced DSA Applications – Combining multiple data structures
-
-🔗 Linked Lists – Singly and circular linked list implementations
-
-📊 HashMap & Queue – Custom implementation and usage
-
-✅ Work Completed
-
-Solved real-world scenarios such as Library Organizer and Traffic Manager
-
-Implemented custom data structures including linked lists, HashMap, and Queue
-
-Applied multiple DSA concepts together to build complete applications
-
-⏭️ Upcoming Plan
-
-Continue deepening DSA knowledge
-
-Solve real-life problems involving sorting and searching techniques
-
-📆 Day 27 – January 17, 2026
-🔍 Focus Areas
-
-🔄 Sorting Algorithms – Real-world applications of sorting
-
-🔁 DSA Revision – Reviewing previously learned concepts
-
-✅ Work Completed
-
-Developed a Fitness Tracker application using sorting techniques
-
-Created Flash Dealz App to sort products based on discounts and priority
-
-Revised key DSA and OOPS concepts covered so far
-
-⏭️ Upcoming Plan
-
-Start learning the C# Collections Framework
-
-Compare built-in collections with custom data structures
-
-📆 Day 28 – January 19, 2026
-🔍 Focus Areas
-
-📊 OOPS & DSA Revision – Strengthening fundamentals
-
-🧬 Generics in C# – Writing reusable and type-safe code
-
-✅ Work Completed
-
-Conducted an in-depth revision of OOPS and DSA concepts
-
-Learned and implemented Generics in C#
-
-Solved scenario-based applications like Parcel Management System and Online Exam System using generics
-
-⏭️ Upcoming Plan
-
-Explore the C# Collections Framework
-
-Study performance and use cases of built-in collections
-
-📆 Day 29 – January 20, 2026
-🔍 Focus Areas
-
-📚 C# Collections – Understanding different collection types
-
-🔄 Backtracking Algorithms – Recursive problem-solving techniques
-
-🌍 Scenario-Based Coding – Applying concepts practically
-
-✅ Work Completed
-
-Practiced all major C# collections such as List, Dictionary, Stack, Queue, and HashSet
-
-Learned and implemented backtracking algorithms
-
-Built real-life scenarios like Aadhar Number Sorting and Password Cracker Simulator
-
-⏭️ Upcoming Plan
-
-Continue advanced practice with C# Collections
-
-Strengthen backtracking concepts with more problems
-
-📆 Day 30 – January 21, 2026
-🔍 Focus Areas
-
-💧 C# Streams – Efficient file and data handling
-
-🌍 Scenario-Based Applications – Using streams in practical cases
-
-✅ Work Completed
-
-Learned and practiced different types of streams in C#
-
-Completed scenario-based projects:
-
-Supermarket Billing Queue
-
-Rank Sheet Generator
-
-⏭️ Upcoming Plan
-
-Begin learning Exception Handling in C#
-
-📆 Day 31 – January 22, 2026
-🔍 Focus Areas
-
-⚠️ Exception Handling – Managing runtime errors effectively
-
-🔁 Concept Revision – Collections, Generics, Streams, and Exceptions
-
-✅ Work Completed
-
-Practiced try-catch-finally blocks and custom exception handling
-
-Attended a detailed revision session covering core C# concepts
-
-⏭️ Upcoming Plan
-
-Start learning Testing in C#, including unit testing
-
-📆 Day 32 – January 23, 2026
-🔍 Focus Areas
-
-🔁 Weekly Review – Streams, Collections, Generics, and Exceptions
-
-🧠 Hands-on Coding Practice
-
-✅ Work Completed
-
-Revised all major topics learned during the week
-
-Solved multiple coding problems to improve implementation skills
-
-⏭️ Upcoming Plan
-
-Start learning Annotations and Reflection in C#
-
-📆 Day 33 – January 24, 2026
-🔍 Focus Areas
-
-⚠️ User-Defined Exceptions – Creating custom exception classes
-
-🏷️ Annotations (Attributes– Understanding metadata in C#
-
-✅ Work Completed
-
-Implemented custom exceptions for better control and error handling
-
-Learned and practiced using annotations in C# programs
-
-⏭️ Upcoming Plan
-
-Explore Reflection, Regular Expressions (Regex), and NUnit Testing
-
-
