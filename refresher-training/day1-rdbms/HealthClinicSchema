@@ -1,0 +1,45 @@
+
+
+-- Use Database
+USE HealthClinicApp;
+GO
+
+-- Create Doctor Table
+CREATE TABLE Doctor
+(
+    DoctorID INT IDENTITY(1,1) PRIMARY KEY,
+    DoctorName VARCHAR(50) NOT NULL,
+    Expertise VARCHAR(50) NOT NULL,
+    ContactNo VARCHAR(15) UNIQUE NOT NULL
+);
+
+-- Create Patient Table
+CREATE TABLE Patient
+(
+    PatientID INT IDENTITY(1,1) PRIMARY KEY,
+    PatientName VARCHAR(50) NOT NULL,
+    Age INT NOT NULL,
+    Gender CHAR(1) CHECK (Gender IN ('M','F')),
+    MobileNo VARCHAR(15) UNIQUE NOT NULL
+);
+
+-- Create Appointment Table
+CREATE TABLE Appointment
+(
+    AppointmentID INT IDENTITY(1,1) PRIMARY KEY,
+    DoctorID INT NOT NULL,
+    PatientID INT NOT NULL,
+    VisitDate DATE NOT NULL,
+    VisitTime TIME NOT NULL,
+    AppointmentStatus VARCHAR(20) DEFAULT 'Pending',
+
+    CONSTRAINT FK_Doctor
+        FOREIGN KEY (DoctorID)
+        REFERENCES Doctor(DoctorID)
+        ON DELETE CASCADE,
+
+    CONSTRAINT FK_Patient
+        FOREIGN KEY (PatientID)
+        REFERENCES Patient(PatientID)
+        ON DELETE CASCADE
+);
