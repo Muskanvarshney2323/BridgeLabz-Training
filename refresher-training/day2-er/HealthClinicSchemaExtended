@@ -1,0 +1,33 @@
+USE HealthClinicApp;
+GO
+-- Room Table
+CREATE TABLE Room
+(
+    RoomID INT IDENTITY(1,1) PRIMARY KEY,
+    RoomNumber VARCHAR(10) NOT NULL UNIQUE,
+    FloorNo INT NOT NULL
+);
+GO
+
+
+-- Doctor_Room Table
+
+CREATE TABLE Doctor_Room
+(
+    DoctorID INT NOT NULL,
+    RoomID INT NOT NULL,
+
+    CONSTRAINT PK_Doctor_Room
+        PRIMARY KEY (DoctorID, RoomID),
+
+    CONSTRAINT FK_DoctorRoom_Doctor
+        FOREIGN KEY (DoctorID)
+        REFERENCES Doctor(DoctorID)
+        ON DELETE CASCADE,
+
+    CONSTRAINT FK_DoctorRoom_Room
+        FOREIGN KEY (RoomID)
+        REFERENCES Room(RoomID)
+        ON DELETE CASCADE
+);
+GO

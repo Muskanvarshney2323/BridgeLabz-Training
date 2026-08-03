@@ -1,0 +1,19 @@
+
+--query with single-column index
+CREATE INDEX idx_DoctorID
+ON Appointment(DoctorID);
+
+
+--composite index
+CREATE INDEX idx_Doctor_Date
+ON Appointment(DoctorID, VisitDate);
+
+
+--covering index
+CREATE INDEX idx_covering
+ON Appointment (DoctorID, VisitDate, AppointmentStatus);
+
+--run covering index
+EXPLAIN
+SELECT DoctorID, VisitDate, AppointmentStatus
+FROM Appointment;
