@@ -12,8 +12,3 @@ ON Appointment(DoctorID, VisitDate);
 --covering index
 CREATE INDEX idx_covering
 ON Appointment (DoctorID, VisitDate, AppointmentStatus);
-
---run covering index
-EXPLAIN
-SELECT DoctorID, VisitDate, AppointmentStatus
-FROM Appointment;

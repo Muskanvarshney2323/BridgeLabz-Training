@@ -1,0 +1,174 @@
+
+use HealthClinicApp;
+GO
+--audit table
+CREATE TABLE Doctors_Audit
+(
+    AuditID INT IDENTITY(1,1) PRIMARY KEY,
+    DoctorID INT,
+    DoctorName VARCHAR(50),
+    Expertise VARCHAR(50),
+    ContactNo VARCHAR(15),
+    ActionType VARCHAR(10),
+    ActionDate DATETIME DEFAULT GETDATE()
+);
+GO
+--after insert(Whenever a new doctor is added...the trigger stores the details in the audit table)
+CREATE TRIGGER trg_Doctors_Insert
+ON Doctor
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO Doctors_Audit
+    (
+        DoctorID,
+        DoctorName,
+        Expertise,
+        ContactNo,
+        ActionType
+    )
+    SELECT
+        DoctorID,
+        DoctorName,
+        Expertise,
+        ContactNo,
+        'INSERT'
+    FROM inserted;
+END;
+GO
+--after update(Whenever a doctor's details are updated...the new values are stored)
+CREATE TRIGGER trg_Doctors_Update
+ON Doctor
+AFTER UPDATE
+AS
+BEGIN
+    INSERT INTO Doctors_Audit
+    (
+        DoctorID,
+        DoctorName,
+        Expertise,
+        ContactNo,
+        ActionType
+    )
+    SELECT
+        DoctorID,
+        DoctorName,
+        Expertise,
+        ContactNo,
+        'UPDATE'
+    FROM inserted;
+END;
+GO
+--after delete(Whenever a doctor is deleted...the old values are stored)
+CREATE TRIGGER trg_Doctors_Delete
+ON Doctor
+AFTER DELETE
+AS
+BEGIN
+    INSERT INTO Doctors_Audit
+    (
+        DoctorID,
+        DoctorName,
+        Expertise,
+        ContactNo,
+        ActionType
+    )
+    SELECT
+        DoctorID,
+        DoctorName,
+        Expertise,
+        ContactNo,
+        'DELETE'
+    FROM deleted;
+END;
+INSERT INTO Doctor (DoctorName, Expertise, ContactNo)
+VALUES
+('Amit Sharma', 'Cardiologist', '9876543210'),
+('Priya Verma', 'Dermatologist', '9876543211'),
+('Rahul Singh', 'Orthopedic', '9876543212'),
+('Sneha Gupta', 'Neurologist', '9876543213'),
+('Rohit Mehta', 'Pediatrician', '9876543214');
+select * from Doctor;
+select * from Doctors_Audit;
+
+
+INSERT INTO Patient (PatientName, Age, Gender, MobileNo)
+VALUES
+('Muskan', 22, 'F', '9876500001'),
+('Rohan', 25, 'M', '9876500002'),
+('Anjali', 30, 'F', '9876500003'),
+('Karan', 28, 'M', '9876500004'),
+('Neha', 35, 'F', '9876500005');
+
+INSERT INTO Appointment
+(DoctorID, PatientID, VisitDate, VisitTime, AppointmentStatus)
+VALUES
+(1, 1, '2026-08-10', '09:00:00', 'Pending'),
+(2, 2, '2026-08-10', '10:00:00', 'Completed'),
+(3, 3, '2026-08-11', '11:00:00', 'Pending'),
+(4, 4, '2026-08-11', '12:00:00', 'Cancelled'),
+(5, 5, '2026-08-12', '02:00:00', 'Pending'),
+(1, 3, '2026-08-12', '03:30:00', 'Completed'),
+(2, 5, '2026-08-13', '10:15:00', 'Pending'),
+(3, 1, '2026-08-13', '11:45:00', 'Completed'),
+(4, 2, '2026-08-14', '01:00:00', 'Pending'),
+(5, 4, '2026-08-14', '04:30:00', 'Cancelled');
+
+SELECT * FROM Patient;
+
+SELECT * FROM Appointment;
+
+
+--patient audit table
+CREATE TABLE Patient_Audit
+(
+    AuditID INT IDENTITY(1,1) PRIMARY KEY,
+    PatientID INT,
+    PatientName VARCHAR(50),
+    Age INT,
+    Gender CHAR(1),
+    MobileNo VARCHAR(15),
+    ActionType VARCHAR(10),
+    ActionDate DATETIME DEFAULT GETDATE()
+);
+GO
+
+--patient after insert trigger
+CREATE TRIGGER trg_Patient_Insert
+ON Patient
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO Patient_Audit
+    (PatientID, PatientName, Age, Gender, MobileNo, ActionType)
+    SELECT PatientID, PatientName, Age, Gender, MobileNo, 'INSERT'
+    FROM inserted;
+END;
+GO
+
+
+--patient update trigger
+CREATE TRIGGER trg_Patient_Update
+ON Patient
+AFTER UPDATE
+AS
+BEGIN
+    INSERT INTO Patient_Audit
+    (PatientID, PatientName, Age, Gender, MobileNo, ActionType)
+    SELECT PatientID, PatientName, Age, Gender, MobileNo, 'UPDATE'
+    FROM inserted;
+END;
+GO
+
+--patient delete trigger
+CREATE TRIGGER trg_Patient_Delete
+ON Patient
+AFTER DELETE
+AS
+BEGIN
+    INSERT INTO Patient_Audit
+    (PatientID, PatientName, Age, Gender, MobileNo, ActionType)
+    SELECT PatientID, PatientName, Age, Gender, MobileNo, 'DELETE'
+    FROM deleted;
+END;
+GO
