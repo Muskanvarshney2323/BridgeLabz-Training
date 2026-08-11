@@ -1,8 +1,31 @@
 {
   "version": 2,
-  "dgSpecHash": "Y7Y58A1tTK0=",
+  "dgSpecHash": "A02uswfj/Eo=",
   "success": true,
   "projectFilePath": "C:\\BridgeLabz-Training\\refresher-training\\day7\\ContactsApp\\ContactsApp.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\h2.net50\\1.4.199.3\\h2.net50.1.4.199.3.nupkg.sha512",
+    "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\h2sharpado.net50\\1.2.0\\h2sharpado.net50.1.2.0.nupkg.sha512",
+    "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
+    "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
+    "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
+    "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\system.security.permissions\\5.0.0\\system.security.permissions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "message": "Package 'System.Drawing.Common' 5.0.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+      "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day7\\ContactsApp\\ContactsApp.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\BridgeLabz-Training\\refresher-training\\day7\\ContactsApp\\ContactsApp.csproj",
+      "libraryId": "System.Drawing.Common",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
