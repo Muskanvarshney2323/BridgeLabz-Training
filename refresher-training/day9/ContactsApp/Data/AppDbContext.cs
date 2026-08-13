@@ -1,15 +1,14 @@
-using Microsoft.EntityFrameworkCore;
 using ContactsApp.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace ContactsApp.Data
+namespace ContactsApp.Data;
+
+public class AppDbContext : DbContext
 {
-    public class AppDbContext : DbContext
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options)
-            : base(options)
-        {
-        }
-
-        public DbSet<Contact> Contacts { get; set; }
     }
+
+    public DbSet<Contact> Contacts { get; set; }
 }
