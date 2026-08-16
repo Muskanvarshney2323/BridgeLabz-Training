@@ -1,0 +1,12 @@
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\bin\Debug\net10.0\ModelLayer.deps.json
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\bin\Debug\net10.0\ModelLayer.dll
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\bin\Debug\net10.0\ModelLayer.pdb
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\obj\Debug\net10.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\obj\Debug\net10.0\ModelLayer.AssemblyInfoInputs.cache
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\obj\Debug\net10.0\ModelLayer.AssemblyInfo.cs
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\obj\Debug\net10.0\ModelLayer.csproj.CoreCompileInputs.cache
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\obj\Debug\net10.0\ModelLayer.sourcelink.json
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\obj\Debug\net10.0\ModelLayer.dll
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\obj\Debug\net10.0\refint\ModelLayer.dll
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\obj\Debug\net10.0\ModelLayer.pdb
+C:\BridgeLabz-Training\refresher-training\day10\AddressBook\ModelLayer\obj\Debug\net10.0\ref\ModelLayer.dll
