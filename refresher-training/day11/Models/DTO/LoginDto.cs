@@ -1,9 +1,14 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Models.DTO
 {
     public class LoginDto
     {
-        public string Email { get; set; }
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Enter a valid email")]
+        public string Email { get; set; } = string.Empty;
 
-        public string Password { get; set; }
+        [Required(ErrorMessage = "Password is required")]
+        public string Password { get; set; } = string.Empty;
     }
 }

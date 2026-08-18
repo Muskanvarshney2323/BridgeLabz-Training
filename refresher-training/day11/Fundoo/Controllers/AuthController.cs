@@ -29,7 +29,9 @@ namespace Fundoo.Controllers
             var token = _service.Login(dto);
 
             if (token == null)
+            {
                 return Unauthorized("Invalid email or password");
+            }
 
             return Ok(new
             {
