@@ -11,7 +11,7 @@ using Repository.Context;
 namespace Repository.Migrations
 {
     [DbContext(typeof(FundooDbContext))]
-    [Migration("20260816163105_InitialCreate")]
+    [Migration("20260819163033_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -23,30 +23,6 @@ namespace Repository.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("Models.Entity.Note", b =>
-                {
-                    b.Property<int>("NoteId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NoteId"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("NoteId");
-
-                    b.ToTable("Notes");
-                });
 
             modelBuilder.Entity("Models.Entity.User", b =>
                 {

@@ -6,6 +6,6 @@ namespace Business.Interface
     {
         string Register(RegisterDto dto);
 
-        string Login(LoginDto dto);
+        string? Login(LoginDto dto);
     }
 }

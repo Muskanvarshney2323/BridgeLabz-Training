@@ -1,12 +1,12 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Business.Interface;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Models.DTO;
 using Models.Entity;
 using Repository.Interface;
-using Business.Interface;
 
 namespace Business.Service
 {
@@ -34,25 +34,47 @@ namespace Business.Service
 
             _repository.Register(user);
 
-            return "Registration successful";
+            return "User registered successfully";
         }
 
-        public string Login(LoginDto dto)
+        public string? Login(LoginDto dto)
         {
-            var user = _repository.Login(dto.Email, dto.Password);
+            var user = _repository.Login(
+                dto.Email,
+                dto.Password
+            );
 
             if (user == null)
+            {
                 return null;
+            }
 
+            return GenerateToken(user);
+        }
+
+        private string GenerateToken(User user)
+        {
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-                new Claim(ClaimTypes.Email, user.Email)
+                new Claim(
+                    ClaimTypes.NameIdentifier,
+                    user.UserId.ToString()
+                ),
+
+                new Claim(
+                    ClaimTypes.Name,
+                    user.Name
+                ),
+
+                new Claim(
+                    ClaimTypes.Email,
+                    user.Email
+                )
             };
 
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(
-                    _configuration["Jwt:Key"]
+                    _configuration["Jwt:Key"]!
                 )
             );
 

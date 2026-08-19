@@ -6,6 +6,6 @@ namespace Repository.Interface
     {
         User Register(User user);
 
-        User Login(string email, string password);
+        User? Login(string email, string password);
     }
 }

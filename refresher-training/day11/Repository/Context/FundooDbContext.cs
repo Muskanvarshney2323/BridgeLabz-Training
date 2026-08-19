@@ -5,13 +5,12 @@ namespace Repository.Context
 {
     public class FundooDbContext : DbContext
     {
-        public FundooDbContext(DbContextOptions<FundooDbContext> options)
+        public FundooDbContext(
+            DbContextOptions<FundooDbContext> options)
             : base(options)
         {
         }
 
         public DbSet<User> Users { get; set; }
-
-        public DbSet<Note> Notes { get; set; }
     }
 }

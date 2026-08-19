@@ -21,10 +21,11 @@ namespace Repository.Service
             return user;
         }
 
-        public User Login(string email, string password)
+        public User? Login(string email, string password)
         {
             return _context.Users.FirstOrDefault(
-                x => x.Email == email && x.Password == password
+                x => x.Email == email &&
+                     x.Password == password
             );
         }
     }

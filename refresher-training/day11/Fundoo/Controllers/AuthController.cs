@@ -30,7 +30,9 @@ namespace Fundoo.Controllers
 
             if (token == null)
             {
-                return Unauthorized("Invalid email or password");
+                return Unauthorized(
+                    "Invalid email or password"
+                );
             }
 
             return Ok(new
