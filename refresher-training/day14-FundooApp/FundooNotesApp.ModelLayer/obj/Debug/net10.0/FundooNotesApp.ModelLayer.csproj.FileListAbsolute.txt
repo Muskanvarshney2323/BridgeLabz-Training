@@ -1,0 +1,12 @@
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\bin\Debug\net10.0\FundooNotesApp.ModelLayer.deps.json
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\bin\Debug\net10.0\FundooNotesApp.ModelLayer.dll
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\bin\Debug\net10.0\FundooNotesApp.ModelLayer.pdb
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\obj\Debug\net10.0\FundooNotesApp.ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\obj\Debug\net10.0\FundooNotesApp.ModelLayer.AssemblyInfoInputs.cache
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\obj\Debug\net10.0\FundooNotesApp.ModelLayer.AssemblyInfo.cs
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\obj\Debug\net10.0\FundooNotesApp.ModelLayer.csproj.CoreCompileInputs.cache
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\obj\Debug\net10.0\FundooNotesApp.ModelLayer.sourcelink.json
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\obj\Debug\net10.0\FundooNotesApp.ModelLayer.dll
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\obj\Debug\net10.0\refint\FundooNotesApp.ModelLayer.dll
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\obj\Debug\net10.0\FundooNotesApp.ModelLayer.pdb
+C:\BridgeLabz-Training\refresher-training\day14-FundooApp\FundooNotesApp.ModelLayer\obj\Debug\net10.0\ref\FundooNotesApp.ModelLayer.dll
