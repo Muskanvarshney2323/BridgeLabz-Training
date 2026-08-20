@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FundooNotesApp.BusinessLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36c56b426513c067ea6df2aadcd4f5b32300d292")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17947a356527c643438fce4cbcc4463ce95b494e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FundooNotesApp.BusinessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FundooNotesApp.BusinessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

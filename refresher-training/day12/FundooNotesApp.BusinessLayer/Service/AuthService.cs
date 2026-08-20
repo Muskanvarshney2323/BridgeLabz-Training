@@ -3,6 +3,7 @@ using FundooNotesApp.BusinessLayer.Interface;
 using FundooNotesApp.ModelLayer.Dtos.Request;
 using FundooNotesApp.ModelLayer.Entities;
 using FundooNotesApp.RepositoryLayer.Interface;
+using Microsoft.Extensions.Configuration;
 
 namespace FundooNotesApp.BusinessLayer.Service
 {
@@ -11,15 +12,18 @@ namespace FundooNotesApp.BusinessLayer.Service
         private readonly IUserRepository _repository;
         private readonly PasswordHelper _passwordHelper;
         private readonly JwtTokenHelper _jwtTokenHelper;
+        private readonly IConfiguration _configuration;
 
         public AuthService(
             IUserRepository repository,
             PasswordHelper passwordHelper,
-            JwtTokenHelper jwtTokenHelper)
+            JwtTokenHelper jwtTokenHelper,
+            IConfiguration configuration)
         {
             _repository = repository;
             _passwordHelper = passwordHelper;
             _jwtTokenHelper = jwtTokenHelper;
+            _configuration = configuration;
         }
 
         public string Register(RegisterRequestDto registerDto)
@@ -75,7 +79,8 @@ namespace FundooNotesApp.BusinessLayer.Service
                 user.UserId,
                 user.FirstName,
                 user.Email,
-                "day12-development-signing-key"
+                _configuration["Jwt:Key"]
+                    ?? throw new InvalidOperationException("JWT signing key is not configured.")
             );
         }
 
