@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.Tests\\FundooNotesApp.Tests.csproj": {}
+    "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.Tests\\FundooNotesApp.Tests.csproj": {}
   },
   "projects": {
-    "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj": {
+    "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj",
+        "projectUniqueName": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj",
         "projectName": "FundooNotesApp.BusinessLayer",
-        "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj",
+        "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\",
-        "outputPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.BusinessLayer\\obj\\",
+        "outputPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Divyanshu Dev\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,11 +26,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj": {
-                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj"
+              "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj": {
+                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj"
               },
-              "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj": {
-                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj"
+              "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj": {
+                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj"
               }
             }
           }
@@ -354,14 +354,14 @@
         }
       }
     },
-    "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj": {
+    "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj",
+        "projectUniqueName": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj",
         "projectName": "FundooNotesApp.ModelLayer",
-        "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj",
+        "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj",
         "packagesPath": "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\",
-        "outputPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\obj\\",
+        "outputPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Divyanshu Dev\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -687,14 +687,14 @@
         }
       }
     },
-    "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj": {
+    "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj",
+        "projectUniqueName": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj",
         "projectName": "FundooNotesApp.RepositoryLayer",
-        "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj",
+        "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj",
         "packagesPath": "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\",
-        "outputPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.RepositoryLayer\\obj\\",
+        "outputPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.RepositoryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Divyanshu Dev\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -709,8 +709,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj": {
-                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj"
+              "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj": {
+                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj"
               }
             }
           }
@@ -738,6 +738,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[10.0.1, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.2.2, )"
             }
           },
           "imports": [
@@ -1034,14 +1038,14 @@
         }
       }
     },
-    "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.Tests\\FundooNotesApp.Tests.csproj": {
+    "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.Tests\\FundooNotesApp.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.Tests\\FundooNotesApp.Tests.csproj",
+        "projectUniqueName": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.Tests\\FundooNotesApp.Tests.csproj",
         "projectName": "FundooNotesApp.Tests",
-        "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.Tests\\FundooNotesApp.Tests.csproj",
+        "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.Tests\\FundooNotesApp.Tests.csproj",
         "packagesPath": "C:\\Users\\Divyanshu Dev\\.nuget\\packages\\",
-        "outputPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.Tests\\obj\\",
+        "outputPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Divyanshu Dev\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1056,14 +1060,14 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj": {
-                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj"
+              "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj": {
+                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.BusinessLayer\\FundooNotesApp.BusinessLayer.csproj"
               },
-              "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj": {
-                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj"
+              "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj": {
+                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.ModelLayer\\FundooNotesApp.ModelLayer.csproj"
               },
-              "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj": {
-                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day16-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj"
+              "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj": {
+                "projectPath": "C:\\BridgeLabz-Training\\refresher-training\\day17-FundooApp\\FundooNotesApp.RepositoryLayer\\FundooNotesApp.RepositoryLayer.csproj"
               }
             }
           }
